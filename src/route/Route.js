@@ -5,9 +5,9 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from '../screens/Home';
 import Info from '../screens/Home/info';
-import InfoPokedex from '../screens/Wishlist/infopoke';
-import EditPokedex from '../screens/Wishlist/editpokemon';
-import PokedexHandle from '../screens/Wishlist/';
+import InfoPokedex from '../screens/Pokedex/infopoke';
+import EditPokedex from '../screens/Pokedex/editpokemon';
+import PokedexHandle from '../screens/Pokedex';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -44,7 +44,7 @@ const Router = () => {
                     tabBarLabelStyle: {
                         fontSize: 12,
                     },
-                    tabBarActiveTintColor: 'violet',
+                    tabBarActiveTintColor: 'red',
                 }}>
                 <Tab.Screen
                     name={'Pokemon'}
@@ -62,7 +62,7 @@ const Router = () => {
                     options={{
                         headerShown: false,
                         tabBarIcon: ({ color, focused }) => (
-                            <AntIcon name="book" size={24} color="black" />
+                            <AntIcon name="book" size={24} color={color} />
                         ),
                     }}
                 />

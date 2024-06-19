@@ -42,7 +42,7 @@ const EditPokemon = ({ route, navigation }) => {
             />
 
             <Button
-                title="Save"
+                title="Update"
                 onPress={handleSubmit}
             />
 
